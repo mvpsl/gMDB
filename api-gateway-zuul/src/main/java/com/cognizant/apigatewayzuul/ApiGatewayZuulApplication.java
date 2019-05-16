@@ -17,6 +17,4 @@ public class ApiGatewayZuulApplication {
 		SpringApplication.run(ApiGatewayZuulApplication.class, args);
 	}
 
-
-
 }

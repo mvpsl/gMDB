@@ -12,7 +12,7 @@ export class SignupService {
 
 
   signup(user: User) {
-    const url = "http://localhost:8080/createuser"
+    const url = "http://localhost:8080/api/user-gmdb-service/createuser"
     
     let ourheaders = new HttpHeaders()
     ourheaders.append('Content-Type', 'application/json');

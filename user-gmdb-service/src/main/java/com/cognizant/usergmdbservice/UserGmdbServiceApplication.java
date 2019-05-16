@@ -13,6 +13,4 @@ public class UserGmdbServiceApplication {
 		SpringApplication.run(UserGmdbServiceApplication.class, args);
 	}
 
-
-
 }

@@ -1,18 +1,23 @@
 package com.cognizant.usergmdbservice.controller;
 
+import com.cognizant.usergmdbservice.DTO.CredentialDTO;
 import com.cognizant.usergmdbservice.domain.User;
 import com.cognizant.usergmdbservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
-import java.lang.reflect.Array;
+import java.net.URI;
 import java.util.List;
 
 @CrossOrigin
 @RestController
 public class UserController {
+
+
+
 
     @Autowired
     UserService userService;
@@ -24,6 +29,9 @@ public class UserController {
 
     @PostMapping(value = "/createuser")
     public ResponseEntity<User> createUser(@RequestBody User user){
+
+
+
         return new ResponseEntity<User>(userService.createUser(user), HttpStatus.OK);
     }
 
