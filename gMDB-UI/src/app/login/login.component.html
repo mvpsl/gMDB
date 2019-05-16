@@ -1,0 +1,20 @@
+<header></header>
+<div class="parent">
+  <form [formGroup]="loginform" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+    </div>
+   
+    <button type="submit" class="btn btn-primary login">Log-In</button><br>
+    <div style="float:left; width: 44%;"><hr/></div>
+    <div style="float:right; width: 44%;"><hr/></div>
+    New User ?
+    <button type="submit" class="btn btn-primary login" routerLink="/signup">Create new GMDB Account</button>
+    <!-- <button type="submit" routerLink="/signup" class="btn btn-primary submit">Sign Up</button> -->
+  </form>
+</div>
