@@ -1,33 +1,13 @@
 <header></header>
-
-<!--
-  <section class="container">
-    <div *ngFor="let movie of Movies">
-      <div class="card">
-        <img
-          class="poster"
-          src="{{movie.poster}}"
-          alt="Avatar"
-          style="width:100%"
-        />
-        <div class="">
-          <h4>
-            <b>{{ movie.title }}</b>
-          </h4>
-          <p>{{ movie.plot }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
--->
-
 <section class="container">
   <div *ngFor="let movie of Movies">
-    <div class="row">
-      <div class="col-sm card">
+    <div class="row" >
+      <div class="col-sm card" [routerLink]="['/moviedetails',movie.movie_id ]">
         <img class="poster" src="{{movie.poster}}" alt="Avatar" />
         <b>{{ movie.title }}</b>
       </div>
     </div>
   </div>
 </section>
+
+

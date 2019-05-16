@@ -1,0 +1,6 @@
+.poster{
+   display: inline;
+}
+.card-body{
+    float: inline-end;
+}

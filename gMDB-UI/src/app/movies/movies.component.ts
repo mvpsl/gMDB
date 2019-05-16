@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movies } from './movies';
-import { data } from './data'
+import { data } from './data';
+import {Router} from '@angular/router';
 
 @Component({
   // selector: 'app-movies',
@@ -10,7 +11,7 @@ import { data } from './data'
 export class MoviesComponent implements OnInit {
 
   Movies: any[];
-  constructor() {
+  constructor(private router: Router) {
   }
 
 
@@ -19,5 +20,7 @@ export class MoviesComponent implements OnInit {
     this.Movies = data;
 
   }
+
+
 
 }

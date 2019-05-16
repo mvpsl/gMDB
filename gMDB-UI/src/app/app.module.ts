@@ -25,6 +25,7 @@ import {
 	IgxListModule,
 	IgxExpansionPanelModule
  } from "igniteui-angular";
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {
     HeaderComponent,
     MoviesComponent,
     ReviewComponent,
+    MovieDetailsComponent,
     
     
   ],

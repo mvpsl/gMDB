@@ -1,35 +1,34 @@
 
-
-export class Movies {
-    public movie_id: number;
+export interface Movies {
+     movie_id: number;
     
-    public description: string;
-    public actors: string[];
-    public awards: string[];
+     description: string;
+     actors: string[];
+     awards: string[];
 
-    public boxoffice: string;
-    public country: string;
-    public dvd: string;
+     boxoffice: string;
+     country: string;
+     dvd: string;
 
-    public director: string;
-    public genre: string[];
-    public language: string;
-    public metascore: number;
-    public plot: string;
-    public poster: string;
-    public production: string;
-    public rated: string;
-    public released: Date;
-    public response: boolean;
-    public runtime: string;
-    public type: string;
-    public website: string;
-    public chips: string[];
-    public writer: string[];
-    public year: number;
-    public imdb_rating: number;
-    public imdbid: string;
-    public title: string;
+     director: string;
+     genre: string[];
+     language: string;
+     metascore: number;
+     plot: string;
+     poster: string;
+     production: string;
+     rated: string;
+     released: Date;
+     response: boolean;
+     runtime: string;
+     type: string;
+     website: string;
+     chips: string[];
+     writer: string[];
+     year: number;
+     imdb_rating: number;
+     imdbid: string;
+     title: string;
     
 
 }
