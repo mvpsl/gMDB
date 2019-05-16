@@ -9,8 +9,14 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MovieRepository extends CrudRepository<Movie, Long> {
+public interface MovieRepository extends JpaRepository<Movie, Long> {
     List<Movie> findMovieModelsByTitleContains(String criteria);
 
+    List<Movie> findMovieModelsByimdbid(String imdbid);
 
+
+    List<Movie> findMovieModelsByGenreContains(String genre);
+
+    List<Movie> findMovieModelsByActorsContains(String actors);
 }
+

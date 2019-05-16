@@ -131,11 +131,11 @@ public class Movie {
     }
 
     public String getActors() {
-        return Actors;
+        return actors;
     }
 
     public void setActors(String actors) {
-        Actors = actors;
+        actors = actors;
     }
 
     public String getResponse() {
@@ -195,11 +195,11 @@ public class Movie {
     }
 
     public String getGenre() {
-        return Genre;
+        return genre;
     }
 
     public void setGenre(String genre) {
-        Genre = genre;
+        genre = genre;
     }
 
     public String getWriter() {
@@ -259,7 +259,7 @@ public class Movie {
     private String title;
 
     @Column(name="ACTORS")
-    private String Actors;
+    private String actors;
 
     @Column(name="RESPONSE")
     private String Response;
@@ -284,7 +284,7 @@ public class Movie {
     private String Country;
 
     @Column(name="GENRE")
-    private String Genre;
+    private String genre;
 
     @Column(name="WRITER",columnDefinition = "LONGTEXT")
     private String Writer;

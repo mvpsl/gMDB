@@ -39,5 +39,49 @@ public class MovieController {
         }
     }
 
+    @GetMapping("/movies/movie")
+    public List<Movie> getMovieByImdbId(@RequestParam(required = false) String imdbid){
+        if(imdbid == null){
+            return movieService.getAllMovies();
+        }
+        else{
+            return movieService.findMovieById(imdbid);
+        }
+    }
+
+
+    @GetMapping("/movies/genre")
+    public List<Movie> getMovieByGenre(@RequestParam(required = false) String genre){
+
+        System.out.println("yo");
+        if(genre == null){
+            System.out.println("yhello");
+            return movieService.getAllMovies();
+
+        }
+        else{
+            System.out.println("yello");
+            return movieService.findByGenre(genre);
+
+        }
+    }
+
+
+    @GetMapping("/movies/actors")
+    public List<Movie> getMovieByActors(@RequestParam(required = false) String actors){
+
+        System.out.println("yo");
+        if(actors == null){
+            System.out.println("yhello");
+            return movieService.getAllMovies();
+
+        }
+        else{
+            System.out.println("yello");
+            return movieService.findByActors(actors);
+
+        }
+    }
+
 
 }

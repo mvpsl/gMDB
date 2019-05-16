@@ -25,4 +25,16 @@ public class MovieService {
     public List<Movie> findMovieByTitle(String title){
         return movieRepository.findMovieModelsByTitleContains(title);
     }
+
+    public List<Movie> findMovieById(String imdbid){
+        return movieRepository.findMovieModelsByimdbid(imdbid);
+    }
+
+    public List<Movie> findByGenre(String genre){
+        return (List)movieRepository.findMovieModelsByGenreContains(genre);
+    }
+
+    public List<Movie> findByActors(String actors){
+        return (List)movieRepository.findMovieModelsByActorsContains(actors);
+    }
 }
