@@ -40,9 +40,7 @@ public class Review {
         this.stars = stars;
     }
 
-    public long getMovieid() {
-        return movieid;
-    }
+    public long getMovieid() { return movieid; }
 
     public void setMovieid(long movieid) {
         this.movieid = movieid;
