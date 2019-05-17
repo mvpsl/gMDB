@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { ReviewFormComponent } from './review-form/review-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
-  { path: 'moviedetails/:id', component: MovieDetailsComponent }
+  { path: 'moviedetails/:id', component: MovieDetailsComponent },
+  {path: 'review-form',component: ReviewFormComponent}
 ];
 
 @NgModule({
