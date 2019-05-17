@@ -1,3 +1,21 @@
-<p>
-  review works!
-</p>
+<div class="container">
+  
+      <div *ngFor ="let review of Reviews">
+          <div *ngIf="id == review.movie_id">
+              <div class="card">
+                  <div class="card-header">
+                    Review {{review.reviewer_id}}
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{review.reviewTitle}}<small>{{review.lastUpdated}}</small></h5>
+                    <p class="card-text"> {{review.reviewText}}</p>
+                    <a href="#" class="btn btn-primary">Review Detail</a>
+                  </div>
+                </div>
+
+          
+        </div>
+  </div>
+
+</div>
+
