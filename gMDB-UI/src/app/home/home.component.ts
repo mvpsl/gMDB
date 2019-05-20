@@ -8,7 +8,7 @@ import { data } from '../movies/data';
 })
 export class HomeComponent implements OnInit {
   movieSearch;
-  movies = data;
+  
   constructor() { }
   ngOnInit() {
   }
