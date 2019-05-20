@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../user';
 import { SignupService } from './signup.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,19 +11,22 @@ import { SignupService } from './signup.service';
 })
 export class SignUpComponent implements OnInit {
   signupform: FormGroup;
-  constructor(private formbuilder: FormBuilder, private signupservice: SignupService) { }
+  currentuser: User;
+
+  // @Output() public myOutput = new EventEmitter();
+  constructor(private router: Router, private formbuilder: FormBuilder, private signupservice: SignupService) { }
 
   ngOnInit() {
     this.signupform = this.formbuilder.group({
-      firstname:['', Validators.email],
-      lastname:['', Validators.email],
-      email:['', Validators.email],
-      password:['']
+      firstname: ['', Validators.email],
+      lastname: ['', Validators.email],
+      email: ['', Validators.email],
+      password: ['']
 
     })
   }
 
-  signup(){
+  signup() {
     const user = new User();
     user.id = null;
     user.firstname = this.signupform.value.firstname;
@@ -32,8 +36,17 @@ export class SignUpComponent implements OnInit {
 
     // console.log(user);
 
-    this.signupservice.signup(user);
-    
+    this.signupservice.signup(user).subscribe(resp => {
+      if (resp == null) {
+        this.router.navigate(['/signup']);
+      } else {
+        this.currentuser = resp;
+        // this.myOutput.emit(resp);
+        console.log("my response is ", resp);
+        this.router.navigate(['/movies']);
+      }
+    });
+
   }
 
 }

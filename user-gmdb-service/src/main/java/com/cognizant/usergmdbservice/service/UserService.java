@@ -33,9 +33,12 @@ public class UserService {
         final String uri = "http://localhost:8082/sign-up";
         RestTemplate restTemplate = new RestTemplate();
         Boolean result = restTemplate.postForObject(uri, new CredentialDTO(user.getEmail(), user.getPassword()), Boolean.class);
-
         System.out.println(result);
 
         return userRepository.save(user);
+    }
+
+    public User getUserByEmail(String email) {
+       return userRepository.getUserByEmail(email);
     }
 }
