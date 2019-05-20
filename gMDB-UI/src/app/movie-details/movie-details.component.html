@@ -15,18 +15,21 @@
         <p class="card-text">Actors: {{movie.actors}}</p>
         <p class="card-text"><small class="text-muted">Website: <a href="{{movie.website}}"
               target="blank">{{movie.website}}</a></small></p>
-        <button class="btn btn-secondary" routerLink="/review-form">Write a Review</button>      
+        <button class="btn btn-secondary" [routerLink]='["/review-form"]'>Write a Review</button>      
              
       </div>
 
     </div>
+    <div class='card-footer'>
+        <button class='btn btn-outline-secondary' (click)='onBack()' style='width:80px'>
+          <i class='fa fa-chevron-left'></i> Back
+        </button>
+      </div>
       <div>
         <app-review></app-review>
       </div> 
-    <div class='card-footer'>
-      <button class='btn btn-outline-secondary' (click)='onBack()' style='width:80px'>
-        <i class='fa fa-chevron-left'></i> Back
-      </button>
-    </div>
+
+
   </div>
+
 </div>

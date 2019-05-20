@@ -1,5 +1,48 @@
 <header></header>
+<!-- <img class="stretch" src="https://images.pexels.com/photos/1020315/pexels-photo-1020315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bg"> -->
 
 
-<iframe width="100%" src="https://www.youtube.com/embed/sY1S34973zA" frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+        <div style="width:100vw; height:93vh; background-image:url('https://images.pexels.com/photos/1020315/pexels-photo-1020315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                        <input class="form-control" type="text" name="search" [(ngModel)]="movieSearch" autocomplete="off" placeholder="&#61442;  Start searching for a movie by a name">
+                    </div>
+                    <ul *ngFor="let movie of movies | filter:movieSearch">
+                        <li>{{movie.title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div id="player" style="width:600px; height:400px; position:absolute; left:50%; margin-left:-300px; top:50%; margin-top:-200px"><
+                <iframe width="1280" height="520" src="https://www.youtube.com/embed/sY1S34973zA?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->

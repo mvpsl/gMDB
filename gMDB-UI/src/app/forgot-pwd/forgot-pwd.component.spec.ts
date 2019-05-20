@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReviewComponent } from './review.component';
+import { ForgotPwdComponent } from './forgot-pwd.component';
 
-describe('ReviewComponent', () => {
-  let component: ReviewComponent;
-  let fixture: ComponentFixture<ReviewComponent>;
+describe('ForgotPwdComponent', () => {
+  let component: ForgotPwdComponent;
+  let fixture: ComponentFixture<ForgotPwdComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReviewComponent ]
+      declarations: [ ForgotPwdComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReviewComponent);
+    fixture = TestBed.createComponent(ForgotPwdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,7 +22,4 @@ describe('ReviewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('get all reviews', () => {
-    expect
-  })
 });
