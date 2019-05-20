@@ -44,17 +44,5 @@ public class MovieControllerTests {
         mvc.perform(get("/").contentType(MediaType.ALL))
                 .andExpect(status().isOk());
     }
-//
-//    @Test
-//    public void getMovieByTitleTests() throws Exception {
-//        String title = "";
-//        mvc.perform(get("movies?title=Guardian"))
-//                .andExpect(status().isOk())
-//                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8));
-////                .andExpect(jsonPath("$[0].title", has(title)));
-//
-////        System.out.println(mvc.perform(get("movies?title=Guardian")).);
-//
-//
-//    }
+
 }
