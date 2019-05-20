@@ -6,6 +6,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'moviedetails/:id', component: MovieDetailsComponent },
-  {path: 'review-form',component: ReviewFormComponent}
+  {path: 'review-form',component: ReviewFormComponent},
+  {path: 'recover-pwd', component: ForgotPwdComponent}
 ];
 
 @NgModule({

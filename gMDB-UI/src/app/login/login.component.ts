@@ -42,10 +42,10 @@ export class LoginComponent implements OnInit {
       }
     });
 
-    // .subscribe(resp => {
-    //   console.log(JSON.stringify(resp));
 
-    // })
+
+    this.loginservice.login(credential);
+    console.log(credential);
 
   }
 

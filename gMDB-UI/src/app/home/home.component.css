@@ -1,4 +1,4 @@
-iframe {
+/* iframe {
     margin-top: 20px;
 margin-bottom: 30px;
 -moz-border-radius: 12px;
@@ -11,4 +11,26 @@ box-shadow: 4px 4px 14px #000;
 -webkit-transform:rotate(360deg);
 
 filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.2);
+} */
+
+img {
+    height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+    padding: 0%;
+}
+iframe {
+  width:600px;
+height:400px;
+position:absolute;
+left:50%;
+margin-left:-300px;
+top:50%;
+margin-top:-200px
 }
