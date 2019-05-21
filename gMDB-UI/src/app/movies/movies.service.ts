@@ -10,7 +10,11 @@ export class MoviesService {
 
   constructor() { }
 
+  getMovieByMyId(id: number){
+   const url = 'http://localhost:8080/api/movies-gmdb-service/movies';
+  //  return this.http.get<Movies[]>(this.url)
 
+  }
   getMovieByID(id: number): Movies {
     let movie;
    for(let i=0; i<data.length;i++){   

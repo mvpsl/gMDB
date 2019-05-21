@@ -14,11 +14,10 @@ export class ReviewService {
   //   let id = +this.route.snapshot.paramMap.get('id');
   // }
 
-  public getReviews(id: string): void {
-    const url = "http://localhost:8090/api/reviews-gmdb-service/getreviewbyMovieId/{id}";
-    this.http.get(url, { 
-      params: id
-    })
+  public getReviews(id: number): void {
+    const url = `http://localhost:8090/api/reviews-gmdb-service/getreviewbyMovieId/${id}`;
+    console.log("yo");
+    this.http.get(url)
     .subscribe(data => {
       console.log(data);
     })

@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { MoviesComponent } from './movies/movies.component';
 import { ReviewComponent } from './review/review.component';
+import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { 
@@ -53,6 +54,7 @@ import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    RouterModule
   
   ],
   providers: [],

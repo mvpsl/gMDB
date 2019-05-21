@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
       credential.password = this.loginform.value.password;
       credential.isAdmin = false;
 
-    this.loginservice.login(credential);
-    console.log(credential);
+      this.loginservice.login(credential);
+      console.log(credential);
     
   }
 

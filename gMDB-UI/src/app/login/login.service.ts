@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Credential } from '../credential'; 
-import {HttpClient, HttpHeaders} from '@angular/common/http'
+import {HttpClient, HttpHeaders,} from '@angular/common/http';
 
 
 @Injectable({
