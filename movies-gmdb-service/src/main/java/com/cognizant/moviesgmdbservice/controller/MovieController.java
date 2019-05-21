@@ -6,10 +6,7 @@ import com.cognizant.moviesgmdbservice.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,6 +15,15 @@ public class MovieController {
     @Autowired
     MovieService movieService;
     MovieRepository movieRepository;
+
+
+
+    @PostMapping(value= "/createMovie")
+    public static ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {
+
+        return new ResponseEntity<Movie>(MovieService.createMovie(movie), HttpStatus.OK);
+
+    }
 
     @GetMapping(value="/")
     public String getMovies(){

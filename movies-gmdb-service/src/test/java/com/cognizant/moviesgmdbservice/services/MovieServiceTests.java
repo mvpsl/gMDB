@@ -1,5 +1,6 @@
 package com.cognizant.moviesgmdbservice.services;
 
+import com.cognizant.moviesgmdbservice.controller.MovieController;
 import com.cognizant.moviesgmdbservice.domain.Movie;
 import com.cognizant.moviesgmdbservice.repository.MovieRepository;
 import com.cognizant.moviesgmdbservice.service.MovieService;
@@ -8,6 +9,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
@@ -47,5 +50,15 @@ public class MovieServiceTests {
         assertEquals(expectedTitle.get(0).getTitle(),actualTitle);
 
     }
+
+    @Test
+    public void addMovieTest(){
+        Movie movie = new Movie();
+
+        ResponseEntity<Movie> expectedMovie = MovieController.createMovie(movie);
+        assertEquals(expectedMovie.getStatusCode(), HttpStatus.OK);
+        assertEquals(expectedMovie.getBody(), movie);
+    }
+
 
 }
