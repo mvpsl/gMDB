@@ -6,6 +6,8 @@ import com.cognizant.moviesgmdbservice.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.cognizant.moviesgmdbservice.DTO.movieDTO;
 
 import java.util.List;
 
@@ -13,6 +15,8 @@ import java.util.List;
 public class MovieService {
     @Autowired
     MovieRepository movieRepository;
+
+
 
 
     public List<Movie> getAllMovies(){
