@@ -1,5 +1,6 @@
 package com.cognizant.logingmdbservice.controller;
 
+import com.cognizant.logingmdbservice.DTO.UserDTO;
 import com.cognizant.logingmdbservice.domain.Credential;
 import com.cognizant.logingmdbservice.service.LogInService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,9 @@ public class LogInController {
     }
 
     @PostMapping(value = "login")
-    public ResponseEntity<Boolean> login(@RequestBody Credential credential){
-        loginService.login(credential);
-        System.out.println(credential);
-        return new ResponseEntity<>(Boolean.TRUE, HttpStatus.OK);
+    public ResponseEntity<UserDTO> login(@RequestBody Credential credential){
+        System.out.println("from log in area");
+        return loginService.login(credential);
     }
 
     @PostMapping(value = "sign-up")

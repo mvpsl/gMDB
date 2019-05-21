@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/">
-    <img src="https://m.media-amazon.com/images/G/01/IMDb/BG_rectangle._CB1509060989_SY230_SX307_AL_.png" width="" height="60" alt="">
+    <img src="https://m.media-amazon.com/images/G/01/IMDb/BG_rectangle._CB1509060989_SY230_SX307_AL_.png" width=""
+      height="60" alt="">
   </a>
-  
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -13,10 +14,16 @@
         <a class="nav-link" routerLink="/">Watch Trailers</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link"routerLink="/movies">Movies</a>
+        <a class="nav-link" routerLink="/movies">Movies</a>
+      </li>
+      <li class="nav-item" *ngIf="!currentuser">
+        <a routerLink="/login" class="btn">Log In</a>
+      </li>
+      <li class="nav-item" *ngIf="currentuser">
+        <a routerLink="/login" class="btn">Log out</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/login" class="btn">Log In</a>
+        <a routerLink="/login" class="btn">Welcome </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

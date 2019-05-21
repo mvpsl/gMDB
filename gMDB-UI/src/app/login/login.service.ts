@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Credential } from '../credential'; 
-import {HttpClient, HttpHeaders,} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { User } from '../user';
+
 
 
 @Injectable({
@@ -8,21 +11,16 @@ import {HttpClient, HttpHeaders,} from '@angular/common/http';
 })
 export class LoginService {
 
+
   constructor(private http: HttpClient) { }
 
 
-  login(credential: Credential) {
+  login(credential: Credential): Observable<any> {
     const url = "http://localhost:8080/api/login-gmdb-service/login"
-
     let ourheaders = new HttpHeaders()
     ourheaders.append('Content-Type', 'application/json');
-    
-    this.http.post(url, credential,{headers: ourheaders})
-    .subscribe(resp => {
-      console.log(JSON.stringify(resp));
-      
-    })
+    return this.http.post(url, credential, { headers: ourheaders });
   }
 
- 
+
 }

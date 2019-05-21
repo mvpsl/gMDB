@@ -20,7 +20,6 @@ public class ReviewController {
     public ResponseEntity<Review> createReview(@RequestBody Review review) {
 
        Review reviewResponse = reviewService.createReview(review);
-       System.out.println("hey");
 
        return new ResponseEntity<>(reviewResponse, HttpStatus.OK);
     }
