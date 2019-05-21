@@ -16,7 +16,8 @@ export class LoginService {
 
 
   login(credential: Credential): Observable<any> {
-    const url = "http://localhost:8080/api/login-gmdb-service/login"
+    // const url = "http://localhost:8080/api/login-gmdb-service/login"
+    const url = "https://apigatewaygmdb.herokuapp.com/api/login-gmdb-service/login"
     let ourheaders = new HttpHeaders()
     ourheaders.append('Content-Type', 'application/json');
     return this.http.post(url, credential, { headers: ourheaders });

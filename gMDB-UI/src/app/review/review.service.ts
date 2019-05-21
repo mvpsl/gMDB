@@ -15,7 +15,7 @@ export class ReviewService {
   // }
 
   public getReviews(id: number): void {
-    const url = `http://localhost:8090/api/reviews-gmdb-service/getreviewbyMovieId/${id}`;
+    const url = `https://apigatewaygmdb.herokuapp.com/api/reviews-gmdb-service/getreviewbyMovieId/${id}`;
     console.log("yo");
     this.http.get(url)
     .subscribe(data => {
