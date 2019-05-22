@@ -1,9 +1,50 @@
 /* nav {
     padding-top: 0px;
 } */
-.navbar-nav > li{
+/* .navbar-nav > li{
     padding-left:30px;
     padding-right:30px;
     margin-left:30px;
     margin-right:30px;
+  } */
+
+  .navbar-nav {
+    width: 100%;
+    backgroundColor:black;
+    overflow: auto;
   }
+  
+  
+  .navbar-nav a {
+    float: left;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    width: 150px; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
+    margin-left: 80px;
+  }
+  
+  /* Add a background color on mouse-over */
+  .navbar-nav a:hover {
+    background-color: rgb(105, 100, 100);
+    color: aliceblue;
+  }
+  
+  /* Style the current/active link */
+  .navbar-nac a.active {
+    background-color: #4CAF50;
+  }
+  
+  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .navbar-nav a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center; /* If you want the text to be left-aligned on small screens */
+    }
+  }
+  
+  
