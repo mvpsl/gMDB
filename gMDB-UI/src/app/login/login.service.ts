@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Credential } from '../credential'; 
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Credential } from '../credential';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { User } from '../user';
+
 
 
 
@@ -10,7 +11,11 @@ import { User } from '../user';
   providedIn: 'root'
 })
 export class LoginService {
+  currentuser: User;
+  private currentUser = new BehaviorSubject(this.currentuser);
+  sessionuser = this.currentUser.asObservable();
 
+ 
 
   constructor(private http: HttpClient) { }
 

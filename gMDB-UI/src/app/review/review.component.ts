@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Movies } from '../movies/movies';
 import { reviews } from './mock_review';
 import { data } from '../movies/data';
@@ -13,7 +13,7 @@ import { ReviewService } from './review.service';
   styleUrls: ['./review.component.css']
 })
 export class ReviewComponent implements OnInit {
-  Reviews : any[];
+  @Input() reviews : [Review];
   Movies: any[];
   id: number;
   
@@ -21,18 +21,9 @@ export class ReviewComponent implements OnInit {
 
   ngOnInit() {
     let id = +this.route.snapshot.paramMap.get('id');
-    console.log("id:",id);
-    
-    this.reviewService.getReviews(id);
-    // this.Reviews = reviews;
-    // this.Movies = data;
-   
-    // console.log(id)
-    // this.getId(id);
+    this.reviewService.getReviews(id).subscribe(resp => {
+      this.reviews = resp;
+    });
+
   }
-//  getId(id){
-//   console.log(id);
-//   this.id = id;
-//    return id;
-//  }
 }
