@@ -5,6 +5,8 @@ import { LoginService } from './login.service';
 import { User } from '../user';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -38,6 +40,7 @@ export class LoginComponent implements OnInit {
       } else {
         this.currentuser = resp;
         console.log("my response is ", resp);
+    
         this.router.navigate(['/movies']);
       }
     });
@@ -45,12 +48,7 @@ export class LoginComponent implements OnInit {
 
 
 
-      this.loginservice.login(credential);
-      console.log(credential);
-    
-
-    this.loginservice.login(credential);
-    console.log(credential);
+  
 
 
   }

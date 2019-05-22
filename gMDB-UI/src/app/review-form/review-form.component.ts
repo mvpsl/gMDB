@@ -22,8 +22,9 @@ export class ReviewFormComponent implements OnInit {
   review(){
     console.log("review");
     const review = new Review();
-    review.reviewText = this.reviewform.value.reviewtext;
-    review.reviewTitle = this.reviewform.value.reviewtitle;
+    review.review = this.reviewform.value.reviewtext;
+    review.movieid = 1;
+    review.userid = 1;
     console.log(review);
     reviews.push(review);
 
