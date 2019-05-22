@@ -28,4 +28,7 @@ export class ReviewFormComponent implements OnInit {
     reviews.push(review);
 
   }
+  submitReview(){
+    
+  }
 }

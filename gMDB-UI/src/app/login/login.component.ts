@@ -44,8 +44,14 @@ export class LoginComponent implements OnInit {
 
 
 
+
+      this.loginservice.login(credential);
+      console.log(credential);
+    
+
     this.loginservice.login(credential);
     console.log(credential);
+
 
   }
 

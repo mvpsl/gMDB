@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule,
+  FormsModule } from '@angular/forms';
 
 import { ForgotPwdComponent } from './forgot-pwd.component';
 
@@ -8,7 +10,11 @@ describe('ForgotPwdComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ForgotPwdComponent ]
+      declarations: [ ForgotPwdComponent],
+      imports: [
+        ReactiveFormsModule,
+        FormsModule
+      ]
     })
     .compileComponents();
   }));

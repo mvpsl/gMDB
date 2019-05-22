@@ -21,6 +21,8 @@ export class ReviewComponent implements OnInit {
 
   ngOnInit() {
     let id = +this.route.snapshot.paramMap.get('id');
+    console.log("id:",id);
+    
     this.reviewService.getReviews(id);
     // this.Reviews = reviews;
     // this.Movies = data;

@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import { MoviesService } from '../movies/movies.service';
 import { Movies } from '../movies/movies';
+import { ReviewComponent } from '../review/review.component';
+
+
 
 
 @Component({
