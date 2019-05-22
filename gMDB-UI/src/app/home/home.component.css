@@ -1,3 +1,39 @@
+img {
+  position: fixed;
+  top: 30;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.jumbotron {
+  display: block;
+  background: grey;
+  position: absolute;
+  top: 20%;
+  bottom: 50%;
+  left: 30%;
+  right: 50%;
+  width: 40%;
+  opacity: 0.9;
+  height: 670px;
+}
+.jumbotron span {
+  color: black;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+
+  padding: 10px;
+}
+.display-4 {
+  font-size: 60px;
+}
+.lead {
+  font-size: 24px;
+}
+=======
 /* iframe {
     margin-top: 20px;
 margin-bottom: 30px;
@@ -14,7 +50,7 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.2);
 } */
 
 img {
-    height: 100%; 
+  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -23,14 +59,14 @@ img {
 }
 
 body {
-    padding: 0%;
+  padding: 0%;
 }
 iframe {
-  width:600px;
-height:400px;
-position:absolute;
-left:50%;
-margin-left:-300px;
-top:50%;
-margin-top:-200px
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  top: 50%;
+  margin-top: -200px;
 }
